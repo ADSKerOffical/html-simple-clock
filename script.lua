@@ -2310,7 +2310,7 @@ DS()
 
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
-	Content = "Creators – MEGACOCONUT(official) and Hamsterovich(official)",
+	Content = "Creators – MEGACOCONUT (official) and Hamsterovich (official)",
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
