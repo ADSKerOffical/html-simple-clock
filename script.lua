@@ -28,6 +28,45 @@ Tab:AddButton({
    end    
 })
 
+local ARR = false
+Tab:AddToggle({
+	Name = "Auto Reversal Red",
+	Default = false,
+	Callback = function(Value)
+	ARR = Value
+		while ARR do wait()
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Reversal Red: Repel") then 
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Reversal Red: Repel").Skill.Red:FireServer()
+  end
+end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Beating to death",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage")["Reworked Gojo Assets"].Remotes.Beatdown:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Real Purple",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Hollow Purple"].Skill.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Infinity void",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Unlimited Void"].Skill.InfinityVoid:FireServer()
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Sukuna (By MEGACOCONUT)"
 })
@@ -1582,6 +1621,46 @@ game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
    end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Garou"
+})
+
+Tab:AddButton({
+ Name = "The crash of the waves",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Crushed Rock"].Punch.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Earth Shaking",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Hunter's Cruelty"].Ground.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Water power",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Flowing Water"].Barrage.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Perfect Hunt",
+ Callback = function()
+        for i = 1, 2 do
+game:GetService("Players").LocalPlayer.Backpack["The Final Hunt"].Ground.Event:FireServer()
+end
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -1967,6 +2046,17 @@ local function removeAudioWithID(id)
 end
 
 removeAudioWithID(144926353)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Always Win in DomainClash",
+ Callback = function()
+while wait() do
+ local Name = game.Players.LocalPlayer.Name
+  local ohString1 = Name
+   game:GetService("ReplicatedStorage")["Domain Clash Assets"].DomainClash:FireServer(ohString1)
+ end
    end    
 })
 
