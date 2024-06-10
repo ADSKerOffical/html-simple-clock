@@ -794,6 +794,28 @@ end
 	end    
 })
 
+Tab:AddDropdown(
+    {
+        Name = "Cutting Slash: Horizontal",
+        Default = "1",
+        Options = {"Weak", "Strong"},
+        Callback = function(Value)
+            if Value == "Weak" then
+                game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Horizontal"].Punch.Event:FireServer(
+
+                )
+            end
+            if Value == "Strong" then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Horizontal"].Punch.Event:FireServer(
+
+                    )
+                end
+            end
+        end
+    }
+)
+
 Tab:AddButton({
  Name = "Deku combo",
  Callback = function()
