@@ -2471,6 +2471,15 @@ Tab:AddButton({
    end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Creators",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("MEGACOCONUT","The main creator of this script. did a lot of different functions and scripts")
+Tab:AddParagraph("Hamsterovich","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: I made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
+
 local function AntiKick()
 xpcall(function() OldNameCall = hookmetamethod(game.Players.LocalPlayer, "__namecall", function(Self, ...) local Args = {...} local NamecallMethod = getnamecallmethod() if Self == game.Players.LocalPlayer and NamecallMethod == "Kick" then return nil end return OldNameCall(Self, ...) end) print("Anti Kick Enabled.") end, function(e) print(e) end)
 end
@@ -2495,6 +2504,10 @@ local playerIDs = {
     1973784642,
     1263588581,
     672542809,
+    2964331585,
+    3564246732,
+    4994454516,
+    448375581,
     3323480274
 }
 
@@ -2535,11 +2548,3 @@ findPlayers()
 end
 
 Antirep()
-
-OrionLib:MakeNotification({
-	Name = "Budgie Hub",
-	Content = "Creators – MEGACOCONUT (official) and Hamsterovich (official)",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-
