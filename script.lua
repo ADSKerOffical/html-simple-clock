@@ -543,6 +543,30 @@ end
    end    
 })
 
+Tab:AddButton(
+    {
+        Name = "20-20-20 Dropkick",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "20-20-20 Dropkick" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
+            end
+
+            if hasTool then
+                game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
+            end
+        end
+    }
+)
+
 Tab:AddButton({
  Name = "Powerful Ravage",
  Callback = function()
@@ -1839,6 +1863,31 @@ Tab:AddDropdown(
             local ohString3 = "Select"
 
             game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+        end
+    }
+)
+
+Tab:AddDropdown(
+    {
+        Name = "Remove accessories",
+        Default = "",
+        Options = {
+            "Meguna's Wheel",
+            "Doflamingo's Cape",
+            "Doflamingo's Sunglasses",
+            "Heian Arms",
+            "Mahoraga Wheel",
+            "King's Cape",
+            "Sorcerer's Cape"
+        },
+        Callback = function(Value)
+            local args = {
+                [1] = "Character",
+                [2] = Value,
+                [3] = "DeSelect"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("Attribute"):FireServer(unpack(args))
         end
     }
 )
