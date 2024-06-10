@@ -733,31 +733,10 @@ end
    end    
 })
 
-Tab:AddDropdown(
+Tab:AddButton(
     {
-        Name = "20-20-20 Dropkick",
-        Default = "1",
-        Options = {"Default", "Powerful"},
-        Callback = function(Value)
-            if Value == "Default" then
-                local Player = game.Players.LocalPlayer
-                local hasTool = false
-                for _, tool in ipairs(Player.Backpack:GetChildren()) do
-                    if tool.Name == "20-20-20 Dropkick" then
-                        hasTool = true
-                        break
-                    end
-                end
-
-                if not hasTool then
-                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
-                end
-
-                if hasTool then
-                    game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
-                end
-            end
-            if Value == "Powerful" then
+        Name = "Powerful 20-20-20 Dropkick",
+        Callback = function()
                 local Player = game.Players.LocalPlayer
                 local hasTool = false
                 for _, tool in ipairs(Player.Backpack:GetChildren()) do
@@ -779,7 +758,6 @@ Tab:AddDropdown(
                     end
                 end
             end
-        end
     }
 )
 
@@ -831,7 +809,7 @@ end
 })
 
 Tab:AddButton({
- Name = "Unlimited Flex Works",
+ Name = "Awakening (20 series) / Unlimited Flex Works",
  Callback = function()
         local Player = game.Players.LocalPlayer
 local hasTool = false
@@ -851,6 +829,93 @@ game:GetService("Players").LocalPlayer.Backpack["Unlimited Flex Works"].LocalScr
 end
    end
 })
+
+local Section =
+    Tab:AddSection(
+    {
+        Name = "KJ NOT Powerful (By Hamsterovich)"
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Stoic Bomb",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Stoic Bomb"]:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "20-20-20 Dropkick",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "20-20-20 Dropkick" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
+            end
+
+            if hasTool then
+                game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Ravage",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Ravage2:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Series Pummel",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Series Pummel"]:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Ground Blow",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+            wait()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Sweep Kick",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Sweep kick"]:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Beatdown",
+        Callback = function()
+            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Beatdown:FireServer()
+        end
+    }
+)
 
 local Section = Tab:AddSection({
 	Name = "Jogo (By MEGACOCONUT)"
