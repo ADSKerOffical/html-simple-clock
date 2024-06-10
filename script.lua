@@ -893,8 +893,6 @@ Tab:AddButton(
         Name = "Ground Blow",
         Callback = function()
             game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
-            wait()
-            game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
         end
     }
 )
@@ -913,6 +911,30 @@ Tab:AddButton(
         Name = "Beatdown",
         Callback = function()
             game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Beatdown:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Awakening (20 series) / Unlimited Flex Works",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Unlimited Flex Works" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+            end
+
+            if hasTool then
+                game:GetService("Players").LocalPlayer.Backpack["Unlimited Flex Works"].LocalScript.Event:FireServer()
+            end
         end
     }
 )
