@@ -421,7 +421,7 @@ Tab:AddButton({
  Name = "Powerful Exploding Blood",
  Callback = function()
         for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Exploding Blood"]["Exploding Blood"].Remote:FireServer()
+	game:GetService("Players").LocalPlayer.Backpack["Exploding Blood"].Skill.Event:FireServer()
 end
    end    
 })
