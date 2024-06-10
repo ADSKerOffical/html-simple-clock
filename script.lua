@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 
-local Window = OrionLib:MakeWindow({Name = "Budgie Hub | Sukuma Battlegrounds", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Budgie Hub | Sukuna Battlegrounds", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Abilities",
@@ -29,7 +29,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Sukuma(Created MEGACOCONUT)"
+	Name = "Sukuna (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -107,7 +107,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Hakari"
+	Name = "Hakari (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -182,7 +182,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Wrong Way (damage - 35. Ability can't damage more.)",
+    Name = "Wrong Way",
     Callback = function()
         local Player = game.Players.LocalPlayer
         local hasTool = false
@@ -405,7 +405,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
- Name = "Choso (Created MEGACOCONUT)"
+ Name = "Choso (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -421,7 +421,7 @@ Tab:AddButton({
  Name = "Powerful Exploding Blood",
  Callback = function()
         for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Exploding Blood"]["Exploded Blood"].Remote:FireServer()
+game:GetService("Players").LocalPlayer.Backpack["Exploding Blood"]["Exploding Blood"].Remote:FireServer()
 end
    end    
 })
@@ -456,7 +456,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Nanami"
+ Name = "Nanami (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -788,7 +788,7 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Jogo(Created MEGACOCONUT)"
+	Name = "Jogo (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -860,7 +860,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Kashimo"
+	Name = "Kashimo (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -893,7 +893,7 @@ end
 local Section =
     Tab:AddSection(
     {
-        Name = "Meguna"
+        Name = "Meguna (By MEGACOCONUT and Hamsterovich)"
     }
 )
 
@@ -992,7 +992,7 @@ Tab:AddDropdown(
 )
 
 Tab:AddButton({
- Name = "Deku combo",
+ Name = "Berserk Barrage",
  Callback = function()
 local ohTable1 = {
  ["Func"] = "DekuCombo"
@@ -1003,14 +1003,14 @@ game:GetService("ReplicatedStorage").CompleteBeserkBeatdownAssets.Deku:FireServe
 })
 
 Tab:AddButton({
- Name = "MalevolentShrine",
+ Name = "Malevolent Shrine",
  Callback = function()
         game:GetService("ReplicatedStorage").MegunaMalevolentShrineRemote.MalevolentShrine:FireServer()
    end    
 })
 
 local Section = Tab:AddSection({
-	Name = "Megumi(Created MEGACOCONUT)"
+	Name = "Megumi (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -1200,7 +1200,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Shinjuku Gojo(Created MEGACOCONUT)"
+	Name = "Shinjuku Gojo (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -1253,7 +1253,7 @@ game:GetService("ReplicatedStorage")["Final Hollow Purple Assets"].Events.Abilit
 })
 
 local Section = Tab:AddSection({
-	Name = "Young Gojo"
+	Name = "Young Gojo (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -1281,7 +1281,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Megumin(By Hamsterovich)"
+	Name = "Megumin (By Hamsterovich)"
 })
 
 Tab:AddButton({
@@ -1294,7 +1294,7 @@ end
 })
 
 Tab:AddButton({
- Name = "Explosion!!!",
+ Name = "Explosion",
  Callback = function()
         local Player = game.Players.LocalPlayer
 local hasTool = false
@@ -1323,7 +1323,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
- Name = "Atomic"
+ Name = "Atomic / Cid Kagenou (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -1348,14 +1348,14 @@ game:GetService("ReplicatedStorage").Server3:InvokeServer(ohTable1)
 })
 
 Tab:AddButton({
- Name = "Activate Atomic Folder(Equip)",
+ Name = "Activate Atomic Folder (Equip)",
  Callback = function()
         game:GetService("ReplicatedStorage").AtomicFolder.Event:FireServer()
    end    
 })
 
 Tab:AddButton({
- Name = "Lag Server(Equip)",
+ Name = "Lag Server (Equip)",
  Callback = function()
         for i = 1, 150 do
  task.wait()
@@ -1365,7 +1365,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Ichigo(Collaboration)"
+ Name = "Ichigo (By MEGACOCONUT and Hamsterovich)"
 })
 
 Tab:AddButton({
@@ -1448,7 +1448,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Become Mugetsu if was ichigo",
+ Name = "Become Mugetsu if was Ichigo",
  Callback = function()
         game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.HollowMask.Remote:FireServer()
         wait(5)
@@ -1483,7 +1483,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Awakened Sukuna(Created MEGACOCONUT)"
+ Name = "Awakened Sukuna (By MEGACOCONUT)"
 })
 
 Tab:AddButton({
