@@ -682,7 +682,7 @@ Tab:AddButton(
 )
 
 local Section = Tab:AddSection({
-	Name = "KJ"
+	Name = "KJ (By MEGACOCONUT and Hamsterovich)"
 })
 
 Tab:AddButton({
@@ -694,25 +694,51 @@ end
    end    
 })
 
-Tab:AddButton(
+Tab:AddDropdown(
     {
         Name = "20-20-20 Dropkick",
-        Callback = function()
-            local Player = game.Players.LocalPlayer
-            local hasTool = false
-            for _, tool in ipairs(Player.Backpack:GetChildren()) do
-                if tool.Name == "20-20-20 Dropkick" then
-                    hasTool = true
-                    break
+        Default = "1",
+        Options = {"Default", "Powerful"},
+        Callback = function(Value)
+            if Value == "Default" then
+                local Player = game.Players.LocalPlayer
+                local hasTool = false
+                for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                    if tool.Name == "20-20-20 Dropkick" then
+                        hasTool = true
+                        break
+                    end
+                end
+
+                if not hasTool then
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
+                end
+
+                if hasTool then
+                    game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
                 end
             end
+            if Value == "Powerful" then
+                local Player = game.Players.LocalPlayer
+                local hasTool = false
+                for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                    if tool.Name == "20-20-20 Dropkick" then
+                        hasTool = true
+                        break
+                    end
+                end
 
-            if not hasTool then
-                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
-            end
+                if not hasTool then
+                    for i = 1, 5 do
+                        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Rush.Event:FireServer()
+                    end
+                end
 
-            if hasTool then
-                game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
+                if hasTool then
+                    for i = 1, 5 do
+                        game:GetService("Players").LocalPlayer.Backpack["20-20-20 Dropkick"].Rush.Event:FireServer()
+                    end
+                end
             end
         end
     }
@@ -2180,7 +2206,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Admin Commands(Creator Only)",
+ Name = "Admin Commands (Creator Only)",
  Callback = function()
         if  game.Players.LocalPlayer.UserId == 4636825706 or game.Players.LocalPlayer.UserId == 5042713445 or game.Players.LocalPlayer.UserId == 6036506267 or game.Players.LocalPlayer.UserId == 6103186375 or game.Players.LocalPlayer.UserId == 1156091597 or game.Players.LocalPlayer.UserId == 2822056554 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminCmds/main/SukunaBattlegrounds"))()
