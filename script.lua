@@ -530,6 +530,157 @@ tool.Parent = game.Players.LocalPlayer.Backpack
    end    
 })
 
+local Section =
+    Tab:AddSection(
+    {
+        Name = "Aoi Todo (By Hamsterovich)"
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Barrage",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Sevenfold of Fist Barrage" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN["Sevenfold of Fist Barrage"].Event:FireServer(
+
+                    )
+                end
+            end
+
+            if hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack["Sevenfold of Fist Barrage"][
+                        "Sevenfold of Fist Barrage"
+                    ].Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Strikes",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Divergent Annihilation Punches" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN["Divergent Annihilattion Punches"].Event:FireServer(
+
+                    )
+                end
+            end
+
+            if hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack["Divergent Annihilation Punches"][
+                        "Divergent Annihilattion Punches"
+                    ].Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Boogie Woogie",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Boogie Woogie" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN["Boogie Woogie"].Event:FireServer()
+            end
+
+            if hasTool then
+                game:GetService("Players").LocalPlayer.Backpack["Boogie Woogie"]["Boogie Woogie"].Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Black Flash",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "BLACK FLASH" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.BlackFlash.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack["BLACK FLASH"].BlackFlash.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Boogie Woogie Beatdown",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Boogie Beatdown" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 5 do
+                game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Skill.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 5 do
+                game:GetService("Players").LocalPlayer.Backpack["Boogie Beatdown"].Skill.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
 local Section = Tab:AddSection({
 	Name = "KJ"
 })
