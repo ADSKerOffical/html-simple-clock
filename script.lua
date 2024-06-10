@@ -2485,6 +2485,57 @@ end
 
 DS()
 
+local function Antirep()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local playerIDs = {
+    442659826,
+    3564246732,
+    1985400567,
+    5753019087,
+    1973784642,
+    1263588581,
+    672542809,
+    3323480274
+}
+
+local otherScriptRunning = false
+
+local function runOtherScript()
+    OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "On the server located reporter, It is advisable to log out of the server",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+wait()
+Spooky = Instance.new("Sound", game.Workspace)
+Spooky.Name = "Spooky"
+Spooky.SoundId = "rbxassetid://844208899"
+Spooky.Volume = 4
+Spooky.PlaybackSpeed = 1
+Spooky.Looped = false
+Spooky:Play()
+    otherScriptRunning = true
+end
+
+local function findPlayers()
+    while not otherScriptRunning do
+        for _, id in ipairs(playerIDs) do
+            local player = game.Players:GetPlayerByUserId(id)
+            if player then
+                runOtherScript()
+                break
+            end
+        end
+        wait(1)
+    end
+end
+
+findPlayers()
+end
+
+Antirep()
+
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "Creators – MEGACOCONUT (official) and Hamsterovich (official)",
