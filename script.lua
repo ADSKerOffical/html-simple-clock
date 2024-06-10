@@ -1743,6 +1743,33 @@ end
 })
 
 Tab:AddButton({
+ Name = "Remove boss summon sound",
+ Callback = function()
+local function getAllSounds()
+    local sounds = {}
+    for _, child in pairs(workspace:GetDescendants()) do
+        if child:IsA("Sound") then
+            table.insert(sounds, child)
+        end
+    end
+    return sounds
+end
+
+local function removeAudioWithID(id)
+    local allSounds = getAllSounds()
+    for _, sound in pairs(allSounds) do
+        if sound.SoundId == "rbxassetid://" .. id then
+            sound:Destroy()
+            print("Removed audio with ID: " .. id)
+        end
+    end
+end
+
+removeAudioWithID(144926353)
+   end    
+})
+
+Tab:AddButton({
  Name = "Fulbright",
  Callback = function()
         pcall(function()
