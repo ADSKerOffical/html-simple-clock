@@ -2385,7 +2385,7 @@ Tab:AddButton({
 Tab:AddButton({
  Name = "Admin Commands (Creator Only)",
  Callback = function()
-        if  game.Players.LocalPlayer.UserId == 4636825706 or game.Players.LocalPlayer.UserId == 5042713445 or game.Players.LocalPlayer.UserId == 6036506267 or game.Players.LocalPlayer.UserId == 6103186375 or game.Players.LocalPlayer.UserId == 1156091597 or game.Players.LocalPlayer.UserId == 2822056554 then
+        if  game.Players.LocalPlayer.CharacterAppearanceId == 4636825706 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 6036506267 or game.Players.LocalPlayer.CharacterAppearanceId == 6103186375 or game.Players.LocalPlayer.CharacterAppearanceId == 1156091597 or game.Players.LocalPlayer.CharacterAppearanceId == 2822056554 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminCmds/main/SukunaBattlegrounds"))()
 else
 OrionLib:MakeNotification({
