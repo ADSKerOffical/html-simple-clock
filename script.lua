@@ -2267,6 +2267,38 @@ removeAudioWithID(144926353)
 })
 
 Tab:AddButton({
+ Name = "Equip all tools",
+ Callback = function()
+        for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+     if tool:IsA("Tool") then
+          tool.Parent = game:GetService("Players").LocalPlayer.Character
+     end
+ end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Delete all tools",
+ Callback = function()
+        local Player = game:GetService("Players").LocalPlayer
+local Backpack = Player.Backpack
+local Character = Player.Character
+
+for _,v in pairs(Backpack:GetChildren()) do
+   if v:IsA("Tool") or v:IsA("HopperBin") then
+       v:Destroy()
+   end
+end
+
+for _,v in pairs(Character:GetChildren()) do
+   if v:IsA("Tool") or v:IsA("HopperBin") then
+       v:Destroy()
+   end 
+end
+   end    
+})
+
+Tab:AddButton({
  Name = "Always Win in DomainClash",
  Callback = function()
 while wait() do
