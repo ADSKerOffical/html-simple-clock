@@ -443,6 +443,136 @@ Tab:AddButton({
     end
 })
 
+local Section =
+    Tab:AddSection(
+    {
+        Name = "Kyojuro Rengoku (By Hamsterovich)"
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Blazing Universe",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Blazing Universe" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Ground.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack["Blazing Universe"].Ground.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Flame Sword",
+        Callback = function()
+            for i = 1, 20 do
+                game:GetService("Players").LocalPlayer.Backpack["Flame Sword"].WeaponCombat.RemoteEvent:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Rengoku (9th Form)",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Rengoku" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Ground.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 5 do
+                    game:GetService("Players").LocalPlayer.Backpack.Rengoku.Ground.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Rising Scorching Sun",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Rising Scorching Sun" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Ground.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack["Rising Scorching Sun"].Ground.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Unknowing Fire",
+        Callback = function()
+            local Player = game.Players.LocalPlayer
+            local hasTool = false
+            for _, tool in ipairs(Player.Backpack:GetChildren()) do
+                if tool.Name == "Unknowing Fire" then
+                    hasTool = true
+                    break
+                end
+            end
+
+            if not hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Punch.Event:FireServer()
+                end
+            end
+
+            if hasTool then
+                for i = 1, 10 do
+                    game:GetService("Players").LocalPlayer.Backpack["Unknowing Fire"].Punch.Event:FireServer()
+                end
+            end
+        end
+    }
+)
+
 local Section = Tab:AddSection({
  Name = "Choso (By MEGACOCONUT)"
 })
