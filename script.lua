@@ -2298,6 +2298,59 @@ end
    end    
 })
 
+Tab:AddButton(
+    {
+        Name = "Reporters / Admin Detector (Beta)",
+        Callback = function()
+            local OrionLib =
+                loadstring(
+                game:HttpGet(
+                    ("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion")
+                )
+            )()
+            local playerIds = {
+                442659826,
+                3564246732,
+                1985400567,
+                5753019087,
+                284548174,
+                1973784642,
+                1263588581,
+                672542809,
+                3323480274
+            }
+
+            local function checkPlayers()
+                for _, player in pairs(game.Players:GetPlayers()) do
+                    if table.find(playerIds, player.UserId) then
+                        Spooky = Instance.new("Sound", game.Workspace)
+                        Spooky.Name = "Spooky"
+                        Spooky.SoundId = "rbxassetid://5304042701"
+                        Spooky.Volume = 2.5
+                        Spooky.PlaybackSpeed = 1
+                        Spooky.Looped = true
+                        Spooky:Play()
+                        OrionLib:MakeNotification(
+                            {
+                                Name = "Budgie Hub | Reporters / Admin Detector",
+                                Content = "Attention! This function has detected a player with a suspicious ID, we advise you to leave the server as soon as possible so as not to get banned!",
+                                Image = "rbxassetid://4483345998",
+                                Time = 60
+                            }
+                        )
+                        return
+                    end
+                end
+
+                task.wait(1)
+                checkPlayers()
+            end
+
+            checkPlayers()
+        end
+    }
+)
+
 Tab:AddButton({
  Name = "Always Win in DomainClash",
  Callback = function()
