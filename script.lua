@@ -2613,6 +2613,15 @@ end
    end    
 })
 
+Tab:AddButton(
+    {
+        Name = "Shutdown",
+        Callback = function()
+            OrionLib:Destroy()
+        end
+    }
+)
+
 local Tab = Window:MakeTab({
 	Name = "Extra",
 	Icon = "rbxassetid://4483345998",
