@@ -191,7 +191,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-    Name = "Toji Fushiguro (By Hamsterovich)"
+    Name = "Toji Fushiguro (By Wolfdmitrich)"
 })
 
 Tab:AddButton({
@@ -281,7 +281,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-    Name = "Yuta Okkotsu (By Hamsterovich)"
+    Name = "Yuta Okkotsu (By Wolfdmitrich)"
 })
 
 Tab:AddButton({
@@ -446,7 +446,7 @@ Tab:AddButton({
 local Section =
     Tab:AddSection(
     {
-        Name = "Kyojuro Rengoku (By Hamsterovich)"
+        Name = "Kyojuro Rengoku (By Wolfdmitrich)"
     }
 )
 
@@ -702,7 +702,7 @@ tool.Parent = game.Players.LocalPlayer.Backpack
 local Section =
     Tab:AddSection(
     {
-        Name = "Aoi Todo (By Hamsterovich)"
+        Name = "Aoi Todo (By Wolfdmitrich)"
     }
 )
 
@@ -851,7 +851,7 @@ Tab:AddButton(
 )
 
 local Section = Tab:AddSection({
-	Name = "KJ (By MEGACOCONUT and Hamsterovich)"
+	Name = "KJ (By MEGACOCONUT and Wolfdmitrich)"
 })
 
 Tab:AddButton({
@@ -963,7 +963,7 @@ end
 local Section =
     Tab:AddSection(
     {
-        Name = "KJ NOT Powerful (By Hamsterovich)"
+        Name = "KJ NOT Powerful (By Wolfdmitrich)"
     }
 )
 
@@ -1175,7 +1175,7 @@ end
 local Section =
     Tab:AddSection(
     {
-        Name = "Meguna (By MEGACOCONUT and Hamsterovich)"
+        Name = "Meguna (By MEGACOCONUT and Wolfdmitrich)"
     }
 )
 
@@ -1563,7 +1563,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Megumin (By Hamsterovich)"
+	Name = "Megumin (By Wolfdmitrich)"
 })
 
 Tab:AddButton({
@@ -1647,7 +1647,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Ichigo (By MEGACOCONUT and Hamsterovich)"
+ Name = "Ichigo (By MEGACOCONUT and Wolfdmitrich)"
 })
 
 Tab:AddButton({
@@ -2886,7 +2886,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("MEGACOCONUT","The main creator of this script. did a lot of different functions and scripts")
-Tab:AddParagraph("Hamsterovich","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: I made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
+Tab:AddParagraph("Wolfdmitrich","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: I made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
 
 local function AntiKick()
 xpcall(function() OldNameCall = hookmetamethod(game.Players.LocalPlayer, "__namecall", function(Self, ...) local Args = {...} local NamecallMethod = getnamecallmethod() if Self == game.Players.LocalPlayer and NamecallMethod == "Kick" then return nil end return OldNameCall(Self, ...) end) print("Anti Kick Enabled.") end, function(e) print(e) end)
