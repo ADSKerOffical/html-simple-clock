@@ -2598,18 +2598,15 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Admin Commands (Creator Only)",
+ Name = "Admin Commands (Free)",
  Callback = function()
-        if  game.Players.LocalPlayer.CharacterAppearanceId == 4636825706 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 6103186375 or game.Players.LocalPlayer.CharacterAppearanceId == 1156091597 or game.Players.LocalPlayer.CharacterAppearanceId == 2822056554 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminCmds/main/SukunaBattlegrounds"))()
-else
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
-	Content = "To unlock this you need to become one of the creators",
+	Content = "I will take revenge on him",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-end
    end    
 })
 
@@ -2886,7 +2883,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("MEGACOCONUT","The main creator of this script. did a lot of different functions and scripts")
-Tab:AddParagraph("Wolfdmitrich","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: I made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
+Tab:AddParagraph("Wolfdmitrich – IP ban","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: I made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
 
 local function AntiKick()
 xpcall(function() OldNameCall = hookmetamethod(game.Players.LocalPlayer, "__namecall", function(Self, ...) local Args = {...} local NamecallMethod = getnamecallmethod() if Self == game.Players.LocalPlayer and NamecallMethod == "Kick" then return nil end return OldNameCall(Self, ...) end) print("Anti Kick Enabled.") end, function(e) print(e) end)
