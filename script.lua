@@ -2863,6 +2863,13 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "Ruler of Black Holes",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/SukunaBattlegrounds_BlackHoleMaster/main/script"))()
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Creators",
 	Icon = "rbxassetid://4483345998",
